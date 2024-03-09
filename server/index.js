@@ -4,11 +4,14 @@ const port = 5000;
 const cors = require("cors");
 const { connectDb } = require("./connection");
 const routes = require("./routes/routes");
+const cookieParser = require("cookie-parser");
 
 connectDb();
 // middelware
 app.use(express.json());
 app.use(cors());
+app.use(cookieParser);
+
 app.get("/", (req, res) => {
   res.send("Welcome");
 });
