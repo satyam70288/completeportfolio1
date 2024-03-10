@@ -4,7 +4,7 @@ const ProjectSchema = new mongoose.Schema(
   {
     name: "string",
     desc: "string",
-    img: "url",
+    img: "string",
     githubUrl: "string",
     hostedUrl: "string",
     publicId: "string",

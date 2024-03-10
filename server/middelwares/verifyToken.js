@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const User = require("../model/userModel");
 
-exports.verifyToken = (req, res) => {
+exports.verifyToken = async (req, res) => {
   const { token } = req.cookies;
   try {
     if (!token)
@@ -23,5 +23,3 @@ exports.verifyToken = (req, res) => {
     });
   }
 };
-
-module.exports = { verifyToken };
