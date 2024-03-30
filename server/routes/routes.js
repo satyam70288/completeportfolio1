@@ -29,9 +29,9 @@ router.get("/refresh", refreshToken, verifyToken, authUser);
 router.get("/checkuser", checkUser);
 
 //skill routes
-router.get("/getSkills", verifyToken, getSkills);
-router.post("/addSkill", verifyToken, addSkills);
-router.delete("/deleteSkill/:id", verifyToken, removeSkills);
+router.get("/getSkills", getSkills);
+router.post("/addSkill", addSkills);
+router.delete("/deleteSkill/:id", removeSkills);
 
 //project
 router.get("/getproject", getProjects);

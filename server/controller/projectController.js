@@ -25,6 +25,7 @@ exports.getProjects = async (req, res) => {
 exports.addProject = async (req, res) => {
   const { name, desc, githubUrl, hostedUrl, secureUrl, publicId, deleteToken } =
     req.body;
+  console.log(`adding project ${name}`);
   try {
     if (!name || !desc)
       return res.status(400).json({

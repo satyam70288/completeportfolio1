@@ -10,7 +10,7 @@ connectDb();
 // middelware
 app.use(express.json());
 app.use(cors());
-app.use(cookieParser);
+app.use(cookieParser()); // Invoke the cookieParser function
 
 app.get("/", (req, res) => {
   res.send("Welcome");
